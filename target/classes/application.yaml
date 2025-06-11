@@ -1,0 +1,21 @@
+
+spring:
+  application:
+    name: store
+
+  flyway:
+    enabled: false
+
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=Inventory_Application;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: 12345678
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
