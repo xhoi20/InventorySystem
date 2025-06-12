@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce594d72-5a87-4283-8ed3-933cf5b034dc" name="Changes" comment="COMIT">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9ab87d5b-c398-44bd-907a-12a829c8fa0f.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="ce594d72-5a87-4283-8ed3-933cf5b034dc" name="Changes" comment="use hash for password" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +20,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -262,7 +262,7 @@
       <workItem from="1749651523878" duration="4000" />
       <workItem from="1749651581264" duration="154000" />
       <workItem from="1749653312228" duration="45000" />
-      <workItem from="1749712866779" duration="1747000" />
+      <workItem from="1749712866779" duration="2631000" />
     </task>
     <task id="LOCAL-00001" summary="COMIT">
       <option name="closed" value="true" />
@@ -272,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749650733849</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="use hash for password">
+      <option name="closed" value="true" />
+      <created>1749716048224</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749716048224</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +299,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="COMIT" />
-    <option name="LAST_COMMIT_MESSAGE" value="COMIT" />
+    <MESSAGE value="use hash for password" />
+    <option name="LAST_COMMIT_MESSAGE" value="use hash for password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
