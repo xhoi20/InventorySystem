@@ -1,6 +1,7 @@
 package Entity;
 import jakarta.persistence.*;
 import lombok.*;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.math.BigDecimal;
 
@@ -29,4 +30,6 @@ public class Product {
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "category_id")
     private Category category;
+
+
 }

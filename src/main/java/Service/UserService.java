@@ -17,17 +17,19 @@ public class UserService {
         if (userRepository.existsByEmail(name)) {
             throw new RuntimeException("Email Already Exists");
         }
-        User user = User.builder().name(name).email(email).password(password).build();
+        User user = User.builder().name(name).email(email).build();
+        user.setPassword(password);
         return userRepository.save(user);
 
 }
 public User loginUser(String email, String password) {
 //to do hash password
         User user = userRepository.findByEmail(email);
-        if (user.getPassword().equals(password)) {
+        if(user.verifyPassword(password )) {
             return user;
+        }else{
+            throw new RuntimeException("Fjalëkalimi i pasaktë");
         }
-        return user;
 
 }
     public Optional<User>getUserById(Long id) {
