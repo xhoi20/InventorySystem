@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce594d72-5a87-4283-8ed3-933cf5b034dc" name="Changes" comment="use hash for password" />
+    <list default="true" id="ce594d72-5a87-4283-8ed3-933cf5b034dc" name="Changes" comment="use hash for password">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundExceptionU.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundExceptionU.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entity/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/Product$ProductBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repository/CategoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/CategoryRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/UserService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -262,7 +291,8 @@
       <workItem from="1749651523878" duration="4000" />
       <workItem from="1749651581264" duration="154000" />
       <workItem from="1749653312228" duration="45000" />
-      <workItem from="1749712866779" duration="2631000" />
+      <workItem from="1749712866779" duration="9759000" />
+      <workItem from="1750072559669" duration="45000" />
     </task>
     <task id="LOCAL-00001" summary="COMIT">
       <option name="closed" value="true" />
@@ -312,22 +342,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Controller/ProductController.java</url>
-          <line>29</line>
+          <line>31</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Controller/CategoryController.java</url>
-          <line>43</line>
+          <line>49</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Controller/CategoryController.java</url>
-          <line>23</line>
+          <line>28</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Service/ProductService.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/Controller/CategoryController.java</url>
-          <line>37</line>
+          <line>43</line>
           <properties class="Controller.CategoryController" method="addProductToCategory">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

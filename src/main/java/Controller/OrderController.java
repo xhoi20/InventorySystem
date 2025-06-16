@@ -13,6 +13,13 @@ public class OrderController {
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
+
+    @GetMapping
+    public ResponseEntity<Iterable<Order>> getAllOrders() {
+        Iterable<Order> orders = orderService.getAllOrders();
+        return ResponseEntity.ok(orders);
+    }
+
     @PostMapping
     public Order addOrder(@RequestBody Order order) {
         return orderService.addOrder(order);

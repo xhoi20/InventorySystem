@@ -35,6 +35,10 @@ public User loginUser(String email, String password) {
     public Optional<User>getUserById(Long id) {
         return userRepository.findById(id);
     }
+
+    public Iterable<User> getAllUsers() {
+        return userRepository.findAll();
+    }
 public User updateUser(Long id,String email, String name, String password) {
     Optional<User> existingUser = userRepository.findById(id);
     if (!existingUser.isPresent()) {

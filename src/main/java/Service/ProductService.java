@@ -1,11 +1,16 @@
 package Service;
 import Entity.Product;
+import Entity.User;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import Repository.ProductRepository;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
 @Service
 public class ProductService {
     private ProductRepository productRepository;
@@ -28,6 +33,11 @@ public class ProductService {
         return productRepository.save(product);
     }
 
+    @Transactional
+
+    public Iterable<Product> getAllProducts() {
+        return productRepository.findAll();
+    }
     @Transactional
     public void deleteProduct(long id) {
         if (!productRepository.existsById(id)) {

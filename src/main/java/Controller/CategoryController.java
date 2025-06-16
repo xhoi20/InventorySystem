@@ -21,21 +21,27 @@ public class CategoryController {
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
+    @GetMapping
+    public Iterable<Category> getAllCategories() {
+        return categoryService.getAllCategories();
+    }
+
     @PostMapping
     public Category addCategory(@RequestBody Category category) {
         return categoryService.addCategory(category);
     }
-    @DeleteMapping({"Id"})
-    public void deleteCategory(@PathVariable byte id) {
-         categoryService.deleteCategory( id);
+    @DeleteMapping("/{id}")
+    public void deleteCategory(@PathVariable long id) {
+        categoryService.deleteCategory(id);
     }
-    @PutMapping
-    public Category updateCategory(@PathVariable byte id, @RequestBody Category category) {
+
+    @PutMapping("/{id}")
+    public Category updateCategory(@PathVariable Long id, @RequestBody Category category) {
         category.setId(id);
         return categoryService.updateCategory(category);
     }
-    @PostMapping({"id/product"})
-    public Category addProductToCategory(@PathVariable Byte id, @RequestBody List<Product> products) {
+    @PostMapping({"/{id}/products"})
+    public Category addProductToCategory(@PathVariable Long id, @RequestBody List<Product> products) {
         return categoryService.addProductToCategory(id, products);
     }
     @ExceptionHandler(IllegalArgumentException.class)

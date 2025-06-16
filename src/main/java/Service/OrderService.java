@@ -1,5 +1,6 @@
 package Service;
 import Entity.Order;
+import Entity.User;
 import Repository.ProductRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,10 @@ public class OrderService {
     public OrderService(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
     }
-
+    @Transactional
+    public Iterable<Order> getAllOrders() {
+        return orderRepository.findAll();
+    }
     @Transactional
     public Order addOrder(Order order) {
         if (order.getDate() == null) {

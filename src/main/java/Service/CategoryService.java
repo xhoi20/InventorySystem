@@ -1,6 +1,7 @@
 package Service;
 
 import Entity.Product;
+import Entity.User;
 import Repository.CategoryRepository;
 import Entity.Category;
 import jakarta.transaction.Transactional;
@@ -8,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class CategoryService {
@@ -18,19 +21,24 @@ public class CategoryService {
 
     }
     @Transactional
+
+    public Iterable<Category> getAllCategories() {
+        return categoryRepository.findAll();
+    }
+    @Transactional
     public Category addCategory(Category category){
         if(category.getName()==null||category.getName().trim().isEmpty()){
             throw new IllegalArgumentException("Category name cannot be null or empty");
 
         }
-        if(category.getId()!=null&& categoryRepository.existsById(category.getId())){
+        if(categoryRepository.existsById(category.getId())){
             throw new IllegalArgumentException("Category already exists");
 
         }
         return categoryRepository.save(category);
     }
     @Transactional
-    public void deleteCategory(byte id){
+    public void deleteCategory(long id){
         if(!categoryRepository.existsById(id)){
             throw new IllegalArgumentException("Category does not exist");
         }
@@ -54,7 +62,7 @@ public class CategoryService {
 
     }
 @Transactional
-    public Category addProductToCategory(Byte categoryId, List<Product> products){
+    public Category addProductToCategory(long categoryId, List<Product> products){
         Optional<Category> optionalCategory = categoryRepository.findById(categoryId);
         if(!optionalCategory.isPresent()){
             throw new IllegalArgumentException("Category does not exist");

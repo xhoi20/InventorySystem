@@ -6,13 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import java.util.Optional;
 @RestController
 @RequestMapping("api/user1")
 public class UserController {
    @Autowired
    private UserService userService;
-
+   @GetMapping
+   public ResponseEntity<Iterable<User>> getAllUsers() {
+      Iterable <User> users = userService.getAllUsers();
+      return ResponseEntity.ok(users);
+   }
    @PostMapping("register")
    public ResponseEntity<User> registerUser(@RequestBody User user) {
       User createdUser = userService.registerUser(user.getName(), user.getEmail(), user.getPassword());
