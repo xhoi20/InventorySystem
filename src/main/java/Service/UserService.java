@@ -1,6 +1,7 @@
 package Service;
 import Entity.User;
 import Repository.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import java.util.Optional;
 public class UserService {
     @Autowired
     private UserRepository userRepository;
-
+@Transactional
     public User registerUser(String name,String email,String password) {
         if (userRepository.existsByEmail(email)) {
             throw new RuntimeException("Email Already Exists");
@@ -22,8 +23,9 @@ public class UserService {
         return userRepository.save(user);
 
 }
+@Transactional
 public User loginUser(String email, String password) {
-//to do hash password
+
         User user = userRepository.findByEmail(email);
         if(user.verifyPassword(password )) {
             return user;
@@ -32,13 +34,15 @@ public User loginUser(String email, String password) {
         }
 
 }
+@Transactional
     public Optional<User>getUserById(Long id) {
         return userRepository.findById(id);
     }
-
+@Transactional
     public Iterable<User> getAllUsers() {
         return userRepository.findAll();
     }
+    @Transactional
 public User updateUser(Long id,String email, String name, String password) {
     Optional<User> existingUser = userRepository.findById(id);
     if (!existingUser.isPresent()) {
@@ -57,6 +61,7 @@ public User updateUser(Long id,String email, String name, String password) {
     user.setPassword(password);
     return userRepository.save(user);
 }
+@Transactional
 public void deleteUserById(Long id) {
     if (!userRepository.existsById(id)) {
         throw new RuntimeException("Perdoruesi me ID " + id + " nuk u gjet.");

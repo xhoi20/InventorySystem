@@ -1,5 +1,6 @@
 package Controller;
 
+import Entity.Category;
 import Entity.Order;
 import Service.OrderService;
 import org.springframework.http.HttpStatus;
@@ -13,22 +14,21 @@ public class OrderController {
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
-
     @GetMapping
-    public ResponseEntity<Iterable<Order>> getAllOrders() {
-        Iterable<Order> orders = orderService.getAllOrders();
-        return ResponseEntity.ok(orders);
+    public Iterable<Order> getAllOrder() {
+        return orderService.getAllOrders();
     }
 
     @PostMapping
     public Order addOrder(@RequestBody Order order) {
         return orderService.addOrder(order);
     }
-    @DeleteMapping
+    @DeleteMapping("{id}")
     public void deleteOrder(@PathVariable long id) {
 
         orderService.deleteOrder(id);
     }
+    @PutMapping("{id}")
     public Order updateOrder(@PathVariable long id, @RequestBody Order order) {
         order.setId(id);
         return orderService.updateOrder(order);

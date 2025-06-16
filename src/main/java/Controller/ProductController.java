@@ -1,5 +1,7 @@
 package Controller;
 
+import Entity.Category;
+import Entity.Order;
 import Entity.Product;
 import Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,23 +21,23 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @PostMapping("{ID}")
+    @PostMapping
     public Product addProduct(@RequestBody Product product) {
         return productService.addProduct(product);
 
     }
 
-    @DeleteMapping
+    @DeleteMapping("{id}")
     public void deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
 
     }
+
     @GetMapping
-    public ResponseEntity<Iterable<Product>> getAllProducts() {
-        Iterable<Product> products = productService.getAllProducts();
-        return ResponseEntity.ok(products);
+    public Iterable<Product> getAllProducts() {
+        return productService.getAllProducts();
     }
-    @PutMapping
+    @PutMapping("{id}")
     public Product updateProduct(@PathVariable Long id, @RequestBody Product product) {
         product.setId(id);
         return  productService.updateProduct(product);

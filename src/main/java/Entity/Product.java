@@ -1,4 +1,6 @@
 package Entity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 import org.mindrot.jbcrypt.BCrypt;
@@ -27,8 +29,9 @@ public class Product {
     @Column(name = "price")
     private BigDecimal price;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade ={ CascadeType.MERGE,CascadeType.PERSIST})
     @JoinColumn(name = "category_id")
+    @JsonBackReference
     private Category category;
 
 

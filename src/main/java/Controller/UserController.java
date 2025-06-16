@@ -1,5 +1,6 @@
 package Controller;
 
+import Entity.Category;
 import Entity.User;
 import Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,8 @@ public class UserController {
    @Autowired
    private UserService userService;
    @GetMapping
-   public ResponseEntity<Iterable<User>> getAllUsers() {
-      Iterable <User> users = userService.getAllUsers();
-      return ResponseEntity.ok(users);
+   public Iterable<User> getAllUser() {
+      return userService.getAllUsers();
    }
    @PostMapping("register")
    public ResponseEntity<User> registerUser(@RequestBody User user) {
