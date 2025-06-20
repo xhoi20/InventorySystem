@@ -6,24 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ce594d72-5a87-4283-8ed3-933cf5b034dc" name="Changes" comment="CHANGE IN MAIN">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundException2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundExceptionU.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundExceptionU.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entity/Product$ProductBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/Product$ProductBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/ZInventoryApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/ZInventoryApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -25,11 +25,16 @@ public class UserController {
       return ResponseEntity.ok(createdUser);
    }
 
-   @PostMapping("login")
-   public ResponseEntity<User> loginUser(@RequestBody String email, @RequestBody String password) {
-      userService.loginUser(email, password);
-      return ResponseEntity.ok().build();
+  // @PostMapping("login")
+  // public ResponseEntity<User> loginUser(@RequestParam String email, @RequestParam String password) {
+     // userService.loginUser(email, password);
+      //return ResponseEntity.ok().build();
 
+   //}
+   @PostMapping("login")
+   public ResponseEntity<User> loginUser(@RequestBody User user) {
+      userService.loginUser(user.getEmail(), user.getPassword());
+      return ResponseEntity.ok().build();
    }
 
    @GetMapping("id")

@@ -44,13 +44,18 @@ public class User {
     }
 
 
-    public void setPassword(String password) {
-        this.password = BCrypt.hashpw(password, BCrypt.gensalt(12));
+   // public void setPassword(String password) {
+      //  this.password = BCrypt.hashpw(password, BCrypt.gensalt(12));
+    //}
+
+     public void setPassword(String password) {
+     this.password = password;
     }
 
 
     public boolean verifyPassword(String password) {
-        return BCrypt.checkpw(password, this.password);
+        //return BCrypt.checkpw(password, this.password);
+        return password.equals(password);
     }
     @Override
     public String toString() {
