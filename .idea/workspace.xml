@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce594d72-5a87-4283-8ed3-933cf5b034dc" name="Changes" comment="fix">
+    <list default="true" id="ce594d72-5a87-4283-8ed3-933cf5b034dc" name="Changes" comment="log in /register fix hashed password">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/ZInventoryApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/ZInventoryApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundExceptionU.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/ResourceNotFoundExceptionU.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entity/Order$OrderBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/Order$OrderBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entity/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entity/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/User$UserBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Repository/ZInventoryApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository/ZInventoryApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +266,7 @@
       <workItem from="1749653312228" duration="45000" />
       <workItem from="1749712866779" duration="9759000" />
       <workItem from="1750072559669" duration="10508000" />
-      <workItem from="1750680175799" duration="9251000" />
+      <workItem from="1750680175799" duration="9923000" />
     </task>
     <task id="LOCAL-00001" summary="COMIT">
       <option name="closed" value="true" />
@@ -315,7 +300,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750073946460</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="log in /register fix hashed password">
+      <option name="closed" value="true" />
+      <created>1750689695321</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750689695321</updated>
+    </task>
+    <task id="LOCAL-00006" summary="log in /register fix hashed password">
+      <option name="closed" value="true" />
+      <created>1750690125750</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750690125750</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +338,8 @@
     <MESSAGE value="use hash for password" />
     <MESSAGE value="TEST" />
     <MESSAGE value="CHANGE IN MAIN" />
-    <option name="LAST_COMMIT_MESSAGE" value="CHANGE IN MAIN" />
+    <MESSAGE value="log in /register fix hashed password" />
+    <option name="LAST_COMMIT_MESSAGE" value="log in /register fix hashed password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
