@@ -4,37 +4,57 @@ import Repository.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.Optional;
 @Service
 public class UserService {
     @Autowired
     private UserRepository userRepository;
+
+@Value("${jasypt.encryptor.password}")
+private String encryptionKey;
+
+    private static final String ENCRYPTION_ALGORITHM = "PBEWithMD5AndDES";
 @Transactional
-    public User registerUser(String name,String email,String password) {
-        if (userRepository.existsByEmail(email)) {
-            throw new RuntimeException("Email Already Exists");
+    public User registerUser(String name, String email, String rawPassword) {
+        if (rawPassword == null || rawPassword.trim().isEmpty()) {
+            throw new IllegalArgumentException("Password cannot be set empty");
         }
-        if (userRepository.existsByEmail(name)) {
-            throw new RuntimeException("Email Already Exists");
-        }
-        User user = User.builder().name(name).email(email).build();
-        user.setPassword(password);
+
+        StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
+        encryptor.setPassword(encryptionKey);
+        encryptor.setAlgorithm(ENCRYPTION_ALGORITHM);
+        String encryptedPassword = encryptor.encrypt(rawPassword);
+
+        User user = new User();
+        user.setName(name);
+        user.setEmail(email);
+        user.setPassword(encryptedPassword);
+
         return userRepository.save(user);
-
-}
+    }
 @Transactional
-public User loginUser(String email, String password) {
-
+    public User loginUser(String email, String inputPassword) {
         User user = userRepository.findByEmail(email);
-        if(user.verifyPassword(password )) {
-            return user;
-        }else{
-            throw new RuntimeException("Fjalëkalimi i pasaktë");
+
+
+        StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
+        encryptor.setPassword(encryptionKey);
+        encryptor.setAlgorithm(ENCRYPTION_ALGORITHM);
+
+        String decryptedPassword = encryptor.decrypt(user.getPassword());
+
+        if (!decryptedPassword.equals(inputPassword)) {
+            throw new RuntimeException("Invalid credentials");
         }
 
-}
-@Transactional
+        return user;
+    }
+
+
+    @Transactional
     public Optional<User>getUserById(Long id) {
         return userRepository.findById(id);
     }
@@ -68,5 +88,5 @@ public void deleteUserById(Long id) {
     }
         userRepository.deleteById(id);
 }
+}
 
-    }

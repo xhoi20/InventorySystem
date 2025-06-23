@@ -19,24 +19,26 @@ public class UserController {
    public Iterable<User> getAllUser() {
       return userService.getAllUsers();
    }
-   @PostMapping("register")
-   public ResponseEntity<User> registerUser(@RequestBody User user) {
+
+@PostMapping("register")
+public ResponseEntity<User> registerUser(@RequestBody User user) {
+   try {
       User createdUser = userService.registerUser(user.getName(), user.getEmail(), user.getPassword());
       return ResponseEntity.ok(createdUser);
+   } catch (RuntimeException e) {
+      return ResponseEntity.badRequest().body(null);
    }
+}
 
-  // @PostMapping("login")
-  // public ResponseEntity<User> loginUser(@RequestParam String email, @RequestParam String password) {
-     // userService.loginUser(email, password);
-      //return ResponseEntity.ok().build();
-
-   //}
    @PostMapping("login")
    public ResponseEntity<User> loginUser(@RequestBody User user) {
-      userService.loginUser(user.getEmail(), user.getPassword());
-      return ResponseEntity.ok().build();
+      try {
+         User authenticatedUser = userService.loginUser(user.getEmail(), user.getPassword());
+         return ResponseEntity.ok(authenticatedUser);
+      } catch (RuntimeException e) {
+         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
+      }
    }
-
    @GetMapping("id")
    public ResponseEntity<User> getUserById(@RequestParam Long id) {
       Optional<User> user = userService.getUserById(id);
