@@ -19,3 +19,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.SQLServerDialect
+jasypt:
+  encryptor:
+    password: your-secret-key
+    algorithm: PBEWithMD5AndDES
