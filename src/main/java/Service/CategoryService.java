@@ -4,6 +4,7 @@ import Entity.Product;
 import Entity.User;
 import Repository.CategoryRepository;
 import Entity.Category;
+import Service.Interfaces.ICategoryService;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +14,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Service
-public class CategoryService {
+public class CategoryService implements ICategoryService {
     private CategoryRepository categoryRepository;
     public CategoryService(CategoryRepository categoryRepository) {
         this.categoryRepository = categoryRepository;

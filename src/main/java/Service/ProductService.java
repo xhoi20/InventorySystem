@@ -4,6 +4,7 @@ import Entity.Category;
 import Entity.Order;
 import Entity.Product;
 import Entity.User;
+import Service.Interfaces.IProductService;
 import jakarta.transaction.Transactional;
 
 import org.springframework.stereotype.Service;
@@ -19,7 +20,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Service
-public class ProductService {
+public class ProductService implements IProductService {
     private ProductRepository productRepository;
 
     public ProductService(ProductRepository productRepository) {

@@ -1,20 +1,18 @@
 package Controller;
 
-import Entity.Category;
 import Entity.User;
-import Service.UserService;
+import Service.Interfaces.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 @RestController
 @RequestMapping("api/user1")
 public class UserController {
    @Autowired
-   private UserService userService;
+   private IUserService userService;
    @GetMapping
    public Iterable<User> getAllUser() {
       return userService.getAllUsers();

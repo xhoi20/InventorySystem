@@ -1,23 +1,24 @@
 package Service;
 import Entity.User;
 import Repository.UserRepository;
+import Service.Interfaces.IUserService;
 import jakarta.transaction.Transactional;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 @Service
-public class UserService {
+public class UserService implements IUserService {
     @Autowired
-    private UserRepository userRepository;
+ private UserRepository userRepository;
 
 @Value("${jasypt.encryptor.password}")
 private String encryptionKey;
 
     private static final String ENCRYPTION_ALGORITHM = "PBEWithMD5AndDES";
-@Transactional
+    @Transactional
     public User registerUser(String name, String email, String rawPassword) {
         if (rawPassword == null || rawPassword.trim().isEmpty()) {
             throw new IllegalArgumentException("Password cannot be set empty");
@@ -35,7 +36,7 @@ private String encryptionKey;
 
         return userRepository.save(user);
     }
-@Transactional
+    @Transactional
     public User loginUser(String email, String inputPassword) {
         User user = userRepository.findByEmail(email);
 
@@ -52,8 +53,6 @@ private String encryptionKey;
 
         return user;
     }
-
-
     @Transactional
     public Optional<User>getUserById(Long id) {
         return userRepository.findById(id);

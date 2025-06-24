@@ -2,6 +2,7 @@ package Service;
 import Entity.Order;
 import Entity.User;
 import Repository.ProductRepository;
+import Service.Interfaces.IOrderService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Optional;
 @Service
-public class OrderService {
+public class OrderService  implements IOrderService {
     private OrderRepository orderRepository;
 
     public OrderService(OrderRepository orderRepository) {

@@ -2,6 +2,7 @@ package Controller;
 
 import Entity.Category;
 import Entity.Order;
+import Service.Interfaces.IOrderService;
 import Service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/order")
 public class OrderController {
-    private OrderService orderService;
+    private IOrderService orderService;
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }

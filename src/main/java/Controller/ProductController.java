@@ -3,6 +3,7 @@ package Controller;
 import Entity.Category;
 import Entity.Order;
 import Entity.Product;
+import Service.Interfaces.IProductService;
 import Service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +16,7 @@ import java.util.Optional;
 @RequestMapping("api/product")
 public class ProductController {
     @Autowired
-    private final ProductService productService;
+    private final IProductService productService;
 
     public ProductController(ProductService productService) {
         this.productService = productService;

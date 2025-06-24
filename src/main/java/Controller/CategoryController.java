@@ -4,6 +4,7 @@ import Entity.Category;
 import Entity.Product;
 import Repository.CategoryRepository;
 import Service.CategoryService;
+import Service.Interfaces.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ import java.util.List;
 @RequestMapping("api/category")
 public class CategoryController {
     @Autowired
-    private CategoryService categoryService;
+    private ICategoryService categoryService;
     @Autowired
     private CategoryRepository categoryRepository;
     public CategoryController(CategoryService categoryService) {
